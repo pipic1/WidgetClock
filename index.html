@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://cdpn.io/pen/debug/vYpogEv?authentication_hash=PBMNWbNDYxbr -->
+<html lang="en" style="--degrees-seconds:12deg; --degrees-minutes:78deg; --degrees-hours:135deg;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Clock</title>
+  <meta name="theme-color" content="black">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  
+  <link rel="stylesheet" href="index.css">
+
+  <script id="rendered-js">
+    var r = document.querySelector(":root");
+
+    function getSeconds() {
+      const interval = setInterval(() => {
+        const now = new Date();
+        var second = now.getSeconds() * 6 - 90;
+        var minutes = now.getMinutes() * 6 - 90;
+        var hours = now.getHours() * 15 - 90;
+        r.style.setProperty("--degrees-seconds", second + "deg");
+        r.style.setProperty("--degrees-minutes", minutes + "deg");
+        r.style.setProperty("--degrees-hours", hours + "deg");
+      }, 1000);
+    }
+    getSeconds();
+  </script>
+
+</head>
+
+<body translate="no" style="-webkit-app-region:drag;">
+  <div class="watch">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <defs></defs>
+
+      <path
+        d="M 306.645 42.549 C 322.197 46.505 354.918 35.274 370.328 44.044 C 386.266 53.119 391.735 86.043 403.452 97.754 C 415.356 109.651 448.676 115.485 457.909 131.626 C 466.887 147.32 454.406 178.033 458.657 193.814 C 463.133 210.426 489.835 232.314 489.965 251.263 C 490.092 269.725 463.718 291.143 459.405 307.218 C 455.1 323.26 467.191 355.006 457.909 370.9 C 448.656 386.744 415.177 391.541 403.452 403.279 C 391.601 415.143 386.349 449.155 370.328 458.482 C 354.653 467.607 323.155 454.993 307.39 459.23 C 291.15 463.594 269.314 490.557 250.69 490.537 C 232.412 490.518 211.394 463.49 195.483 459.23 C 179.296 454.898 147.151 467.7 131.053 458.482 C 114.966 449.268 109.743 415.094 97.929 403.279 C 86.39 391.738 52.418 386.731 43.472 370.9 C 34.24 354.566 47.115 322.145 42.724 305.724 C 38.536 290.066 11.435 269.279 11.416 251.263 C 11.397 232.945 38.428 211.251 42.724 195.308 C 47.113 179.017 34.398 147.836 43.472 131.626 C 52.374 115.725 85.585 110.093 97.181 98.502 C 109.144 86.542 114.834 53.325 131.053 44.044 C 147.176 34.817 178.469 46.913 194.735 42.549 C 210.299 38.374 232.809 12.745 250.69 11.989 C 267.502 11.277 296.083 39.861 306.645 42.549 Z"
+        style="stroke: rgba(0, 0, 0, 0); fill: var(--bg-clock-color);"
+        transform="matrix(0.969997, -0.243115, 0.243115, 0.969997, -53.562899, 68.485073)">
+      </path>
+
+      <path id="curve" style="fill: transparent; stroke: transparent;"
+        d="M 161.787 107.175 C 161.787 107.175 202.932 77.739 245.85 77.332 C 291.552 76.899 332.05 103.629 332.05 103.629">
+      </path>
+
+      <text width="500">
+        <textpath xlink:href="#curve"
+          style="fill:white;text-anchor: middle;font-size: 2em;font-family: system-ui;font-weight: 500;"
+          startOffset="50%">
+          Tue 03
+        </textpath>
+      </text>
+
+    </svg>
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+  </div>
+
+</body>
+
+</html>

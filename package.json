@@ -1,0 +1,14 @@
+{
+  "name": "widgetclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}

@@ -1,0 +1,87 @@
+html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body{
+    margin:0;
+}
+
+:root {
+    --bg-clock-color: rgb(155, 87, 87);
+    --minute-color: white;
+    --hour-color: #ad8888;
+    --second-color: #dcd9d957;
+    --text-color: white;
+}
+
+.watch {
+    --width: 15em;
+    height: var(--width);
+    border-radius: 50%;
+    width: var(--width);
+    position: relative;
+}
+
+.minute {
+    transform: rotate(var(--degrees-hours));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.minute:after {
+    width: 6em;
+    border: 0.1875em solid var(--minute-color);
+    height: 0.25em;
+    border-radius: 0.75em;
+    transform: rotate(0rad);
+    position: absolute;
+    content: "";
+    top: -0.3125em;
+    left: -0.375em;
+}
+
+.hour {
+    transform: rotate(var(--degrees-minutes));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hour:after {
+    width: 3em;
+    border: 0.375em solid var(--hour-color);
+    background: var(--hour-color);
+    height: 0.25em;
+    border-radius: 0.75em;
+    transform: rotate(0rad);
+    position: absolute;
+    content: "";
+    top: -0.5em;
+    left: -0.5em;
+}
+
+.second {
+    transform: rotate(var(--degrees-seconds));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.second:after {
+    width: 1em;
+    background: var(--second-color);
+    height: 1em;
+    border-radius: 0.75em;
+    transform: rotate(0rad);
+    position: absolute;
+    content: "";
+    top: -0.5em;
+    left: 5em;
+}
