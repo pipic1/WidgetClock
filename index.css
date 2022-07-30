@@ -6,12 +6,15 @@ html {
     overflow: hidden;
 }
 
+
+
+
 body{
     margin:0;
 }
 
 :root {
-    --bg-clock-color: rgb(155, 87, 87);
+    --bg-clock-color: rgba(155, 87, 87, 0.873);
     --minute-color: white;
     --hour-color: #ad8888;
     --second-color: #dcd9d957;
